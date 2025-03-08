@@ -50,7 +50,7 @@ const About = () => {
               About Us
             </h2>
             <p className="pb-10 text-center text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              At <strong>ALGOVERSE</strong>, we are more than just a business;
+              At <strong>NovaTech</strong>, we are more than just a business;
               we are a passionate team dedicated to making a difference. With a
               firm belief in the power of innovation, integrity, and exceptional
               service, we’ve built a company that’s committed to exceeding

@@ -125,16 +125,16 @@ const Footer = () => {
           </h2>
           <ul className="space-y-4">
             {[
-              { label: "Mobile", value: "Lorem ipsum", icon: "faPhone" },
+              { label: "Mobile", value: "+2547123456789", icon: "faPhone" },
               {
                 label: "Email",
-                value: "Lorem ipsum",
+                value: "Example@gmail.com",
                 icon: "faEnvelope",
               },
               {
                 label: "Address",
                 value:
-                  "Lorem ipsum",
+                  "Nairobi, Kenya",
                 icon: "faMapMarkerAlt",
               },
             ].map((contact, index) => (

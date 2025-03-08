@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import api from 'C:/Users/GEORGE/Documents/web dev/twende/algoverse-beta/src/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,32 +22,12 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        "http://localhost/service-backend/saveData.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams(formData),
-        }
-      );
-      const data = await response.json();
-      if (data.status === "success") {
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-        toast.success("Form submitted successfully");
-        setMessage("Form submitted successfully!"); // Set success message
-      } else {
-        setMessage("Failed to submit form."); // Set failure message
-        toast.error("Failed to submit form.");
-      }
+      await api.post('/api/contact/', formData);
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', phone: '', message: '' }); 
+     
     } catch (error) {
-      console.error("Error submitting form:", error);
-      setMessage("An error occurred."); // Set error message
+      alert ("An error occurred."); // Set error message
     }
   };
 
