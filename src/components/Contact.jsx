@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import api from 'C:/Users/GEORGE/Documents/web dev/twende/algoverse-beta/src/api';
+import api from 'src/api.js';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
